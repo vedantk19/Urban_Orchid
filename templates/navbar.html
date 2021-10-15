@@ -1,13 +1,20 @@
 {% load cart_template_tags %}
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar" 
-style="background-color:rgb(212, 250, 192) !important;">
+style="background-color:#161616 !important;">
+
     <div class="container" >
 
       <!-- Brand -->
       <a class="navbar-brand waves-effect" href="/">
-        <strong class="black-text">Urban Orchid</strong>
+        <strong class="white-text" style="color: #aedac8!important;">Urban Orchid</strong>
       </a>
+      <li class="nav-item" style="list-style-type: none !important;">
+        <a href="/home/" class="nav-link waves-effect" style="color: #aedac8 !important;">Shop</a>
+      </li>
+      <li class="nav-item" style="list-style-type: none !important;"> 
+        <a href="/home/" class="nav-link waves-effect" style="color: #aedac8 !important;">About Us</a>
+      </li>
 
       <!-- Collapse -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -32,34 +39,35 @@ style="background-color:rgb(212, 250, 192) !important;">
         </ul>
 
         <!-- Right -->
-        <ul class="navbar-nav nav-flex-icons">
+        <ul class="navbar-nav nav-flex-icons" >
           {% if request.user.is_authenticated %}
           <li class="nav-item">
             <a href="{% url 'core:order-summary' %}" class="nav-link waves-effect">
               <span class="badge red z-depth-1 mr-1"> {{ request.user|cart_item_count }} </span>
-              <i class="fas fa-shopping-cart"></i>
-              <span class="clearfix d-none d-sm-inline-block"> Cart </span>
+              <i class="fas fa-shopping-cart" style="color: #aedac8 !important;"></i>
+              <span class="clearfix d-none d-sm-inline-block" style="color: #aedac8 !important;"> Cart </span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link waves-effect" href="{% url 'account_logout' %}">
-              <span class="clearfix d-none d-sm-inline-block"> Logout </span>
+              <span class="clearfix d-none d-sm-inline-block" style="color: #aedac8 !important;"> Logout </span>
             </a>
           </li>
           {% else %}
           <li class="nav-item">
             <a class="nav-link waves-effect" href="{% url 'account_login' %}">
-              <span class="clearfix d-none d-sm-inline-block"> Login </span>
+              <span class="clearfix d-none d-sm-inline-block" style="color: #aedac8 !important;"> Login </span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link waves-effect" href="{% url 'account_signup' %}">
-              <span class="clearfix d-none d-sm-inline-block"> Signup </span>
+              <span class="clearfix d-none d-sm-inline-block" style="color: #aedac8 !important;"> Signup </span>
             </a>
           </li>
           {% endif %}
         </ul>
       </div>
-
     </div>
   </nav>
+
+  

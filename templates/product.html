@@ -11,7 +11,7 @@
         <!--Grid column-->
         <div class="col-md-6 mb-4">
 
-          <img src="{{ item.image.url }}" class="img-fluid" alt="">
+          <img src="{{ item.image.url }}" class="img-fluid" alt="" style="border-radius: 20px;">
 
         </div>
         <!--Grid column-->
@@ -24,7 +24,7 @@
 
             <div class="mb-3">
               <a href="">
-                <span class="badge purple mr-1">{{ object.get_category_display }}</span>
+                <span class="badge purple mr-1" style="border-radius: 5px;">{{ object.get_category_display }}</span>
               </a>
             </div>
 
@@ -54,11 +54,11 @@
               </button>
 
             </form> {% endcomment %}
-            <a href="{{ object.get_add_to_cart_url }}" class="btn btn-primary btn-md my-0 p">
+            <a href="{{ object.get_add_to_cart_url }}" class="btn btn-primary btn-md my-0 p" style="border-radius: 20px;">
               Add to cart
               <i class="fas fa-shopping-cart ml-1"></i>
             </a>
-            <a href="{{ object.get_remove_from_cart_url }}" class="btn btn-danger btn-md my-0 p">
+            <a href="{{ object.get_remove_from_cart_url }}" class="btn btn-danger btn-md my-0 p" style="border-radius: 20px;">
               Remove from cart
             </a>
 
