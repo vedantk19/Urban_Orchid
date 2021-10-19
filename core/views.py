@@ -18,12 +18,14 @@ from .models import Item, OrderItem, Order, Address, Payment, Coupon, Refund, Us
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
 
-# def landingPage(request):
-#     return render(request, "Landing.html")
+def landingPage(request):
+    model = Item.objects.all()[:4]
+    return render(request, "Landing.html",{'object_list':model})
 
-class landingPage(ListView):
-    model = Item
-    template_name = "Landing.html"
+# class landingPage(ListView):
+#     model = Item
+#     template_name = "Landing.html"
+    
 
 class HomeView(ListView):
     model = Item
